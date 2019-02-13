@@ -11,7 +11,6 @@ $(function(){
 	$('ul.scroll1 li a:eq(4)').scrollSmooth({
 		speed:1500
 	});
-	
 	$('.card').hover(function() {
 		$(this ).find('.heading').css({
 			display:'block',
@@ -46,9 +45,16 @@ $(function(){
 		$('.container-icon').click();
 	});
 	$('#login').click(modal);
-//	$('#login').click(function(){
-//		$('.modal-cover').fadeIn();
-//	});
+	$('ul.scroll2 li a:eq(0)').scrollSmooth();
+	$('ul.scroll2 li a:eq(1)').scrollSmooth();
+	$('ul.scroll2 li a:eq(2)').scrollSmooth();
+	$('ul.scroll2 li a:eq(3)').scrollSmooth({
+		speed:1500
+	});
+	$('ul.scroll2 li a:eq(4)').scrollSmooth({
+		speed:1500
+	});
+
 });
 
 var posAnim61,posAnim71;
