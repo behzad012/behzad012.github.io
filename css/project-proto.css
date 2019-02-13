@@ -109,6 +109,7 @@ ul#specsid li:hover{
 		font-family: "Times New Roman", 'Times',"serif",'Cambria', "Hoefler Text", "Liberation Serif";
 	}
 }
+
 .specs-title {
 	background-color: rgba(69,69,69,1.00); font-size: 1.2rem;padding: 10px;border-radius: 3px; margin-bottom: 5px;position: relative;cursor: pointer;transition: .5s;
 }
@@ -185,7 +186,6 @@ ul#specsid li:hover{
   margin: 6px 0;
   transition: 0.4s;
 }
-
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
@@ -199,4 +199,9 @@ ul#specsid li:hover{
 }
 .m-content {
 	width: 400px;height: 400px;position: absolute;z-index: 102; background: rgba(216,216,216,1.00);padding: 20px;line-height: 1.5;text-align: center;direction: ltr;display: none;top:-400px;overflow: hidden;
+}
+@media (max-width: 767px) {
+	.m-content{
+		width: 300px;
+	}
 }
