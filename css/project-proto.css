@@ -89,11 +89,12 @@ nav.flexmenu ul li:hover{background-color: rgba(0,0,0,0.2);border-radius: 5px;}
 	overflow: hidden;
 }
 ul#specsid li{
-	transition:1s;
+	transition:.6s;
 }
 ul#specsid li:hover{
 	cursor: pointer;
 	background: rgba(183,183,183,1.00);
+	color: black;
 }
 
 @media (min-width: 768px) {

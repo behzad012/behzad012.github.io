@@ -153,10 +153,12 @@ function showSpecs(){
 	var target;
 	target=$(this).attr('name');
 	$('ul#specsid li').css({
-		backgroundColor:''
+		backgroundColor:'',
+		color:''
 	});
 	$(this).css({
-		backgroundColor:'lightgray'
+		backgroundColor:'lightgray',
+		color: 'black'
 	});
 	$('.specs').fadeOut(100);
 	$('.'+target).fadeIn(400);
@@ -216,12 +218,10 @@ function anim21(){
 		opacity: '1'
 	},600);
 	$('#amin21').children().each(function(index) {
-		(function(self, i){
-			$(self).stop().animate({
-				left: '0',
-				opacity: '1'
-			},500*(i+1));
-		}(this, index));
+		$(this).stop().animate({
+			left: '0',
+			opacity: '1'
+		},500*(index+1));
 	});
 }
 function anim31(){
@@ -238,12 +238,10 @@ function anim31(){
 		opacity: '1'
 	},600);
 	$('#amin31').children().each(function(index) {
-		(function(self, i){
-			$(self).stop().animate({
-				left: '0',
-				opacity: '1'
-			},500*(i+1));
-		}(this, index));
+		$(this).stop().animate({
+			left: '0',
+			opacity: '1'
+		},500*(index+1));
 	});
 }
 
@@ -312,13 +310,12 @@ function anim61(){
 				});
 			});
 		});
-		
 	}
 }
 function anim61End(){
 	if(!anim61Tag){
 		anim61Tag=!anim61Tag;
-		$('#posAnim61').find('input').stop().css({
+		$('#posAnim61').find('input').not(':last').stop().css({
 			left: '100%',
 			opacity: '0'
 		});
