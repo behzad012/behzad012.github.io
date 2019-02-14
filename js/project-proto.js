@@ -34,9 +34,9 @@ $(function(){
 		$('.specs-title').first().click();
 	}
 	posAnim61= $('#posAnim61').offset().top+100;
-	posAnim71= $('#posAnim71').offset().top+100;
-//	anim61();
-//	anim71();
+	posAnim71= $('#posAnim71').offset().top+10;
+	anim61();
+	anim71();
 	$('.container-icon').click(function(){
 		$(this).toggleClass('change');
 		$('.sm-dis').slideToggle(500);
@@ -187,13 +187,19 @@ function anim11(){
 		left: '0',
 		opacity: '1'
 	},600);
+//	$('#amin11').children().each(function(index) {
+//		(function(self, i){
+//			$(self).stop().animate({
+//				left: '0',
+//				opacity: '1'
+//			},500*(i+1));
+//		}(this, index));
+//	});
 	$('#amin11').children().each(function(index) {
-		(function(self, i){
-			$(self).stop().animate({
-				left: '0',
-				opacity: '1'
-			},500*(i+1));
-		}(this, index));
+		$(this).stop().animate({
+			left: '0',
+			opacity: '1'
+		},500*(index+1));
 	});
 }
 function anim21(){
