@@ -55,12 +55,13 @@ $(function(){
 		speed:1500
 	});
 	$('footer').outerHeight($('#posAnim71').outerHeight());
+	$('.modalImg').click(modalImg);
 });
 
 var posAnim61,posAnim71;
 var $wHeight=$(window).height();
 $(window).scroll(function() {
-    var $scrollTop = $(this).scrollTop();
+	var $scrollTop = $(this).scrollTop();
 	var $height=$(window).scrollTop()+$wHeight;
     if($scrollTop >= 200) {
       	anim41();
@@ -153,12 +154,12 @@ function showSpecs(){
 	var target;
 	target=$(this).attr('name');
 	$('ul#specsid li').css({
-		backgroundColor:'',
-		color:''
+		color:'',
+		backgroundColor:''
 	});
 	$(this).css({
-		backgroundColor:'lightgray',
-		color: 'black'
+		color: '#000',
+		backgroundColor:'lightgray'
 	});
 	$('.specs').fadeOut(100);
 	$('.'+target).fadeIn(400);
@@ -315,7 +316,7 @@ function anim61(){
 function anim61End(){
 	if(!anim61Tag){
 		anim61Tag=!anim61Tag;
-		$('#posAnim61').find('input').not(':last').stop().css({
+		$('#posAnim61').find('input').not().stop().css({
 			left: '100%',
 			opacity: '0'
 		});
@@ -411,6 +412,43 @@ function modal(){
 	});
 }
 
+function modalImg(){
+	var $self=$(this);
+	var cover=$('<div/>').addClass('position-fixed userSelect vw-100 vh-100 text-center overflow-hidden').css({
+		top: '0',
+		left: '0',
+		opacity: '0',
+		background: 'rgba(0,0,0,.9)'
+	});
+	var close=$('<span>+</span>').addClass('closeModalImg');
+	$(cover).append(close);
+	var contentDiv=$('<div/>').addClass('mt-5 mx-auto p-3').css({
+		height: '80%',
+		width: '80%'
+	});
+	var img=$('<img>').addClass('img-fluid').css('object-fit','contain');
+	$(img).attr('src',function(){
+		return $self.data('modalsrc');
+	});
+	$(contentDiv).append(img);
+	$(cover).append(contentDiv);
+	var caption=$('<div/>').addClass('text-white p-3').text(function(){
+		return $self.data('modalcaption');
+	});
+	$(contentDiv).append(caption);
+	$('body').append(cover);
+	$(cover).animate({
+		opacity: '1'
+	},400);
+	$(cover).click(function(){
+		$(this).fadeOut(300);
+	});
+	$(document).keyup(function(event) {
+		if(event.keyCode === 27) {
+			$(cover).fadeOut(300);
+		}
+	});
+}
 
 
 

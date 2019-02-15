@@ -161,7 +161,7 @@ ul#specsid li:hover{
 
 
 .modal-cover {
-	position: fixed; background: rgba(0,0,0,0.8);z-index: 100;display: none;
+	position: fixed; background: rgba(0,0,0,0.9);z-index: 100;
 }
 
 .closeModal {
@@ -178,6 +178,9 @@ ul#specsid li:hover{
 .container-icon {
   display: inline-block;
   cursor: pointer;
+}
+.container-icon:hover div{
+	background: #AAA;
 }
 
 .bar1, .bar2, .bar3 {
@@ -205,4 +208,16 @@ ul#specsid li:hover{
 	.m-content{
 		width: 300px;
 	}
+}
+.closeModalImg{
+	position: absolute;top: 0px;right: 30px;padding: 0px 0px;font-size: 40px;transform: rotate(45deg);cursor: pointer;font-weight: bold;color: white;
+}
+.closeModalImg:hover {
+	color: red;
+}
+.pointer{
+	cursor: pointer;
+}
+.myFilter:hover {
+	filter: contrast(1.2);
 }
