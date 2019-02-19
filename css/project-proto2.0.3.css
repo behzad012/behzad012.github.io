@@ -18,11 +18,14 @@ body{text-align: right; font-family: 'IRANSansWeb',tahoma,arial;}
 	direction: ltr;
 }
 .rtl{
-	direction: rtl;
+	direction: rtl !important;
 }
 img{ max-width: 100%; max-height: 100%;height: auto;}
-a{text-decoration: none;}
+a,a:link{text-decoration: none;color: inherit;}
 a:hover{text-decoration: none;}
+ol, ul {
+	list-style: none;
+}
 .vw-100{
 	width:100vw;
 }
@@ -58,7 +61,7 @@ a:hover{text-decoration: none;}
 	right: 0;border-radius: 5px 0 0 5px;
 }
 
-nav.flexmenu{padding: 5px 0px 0px 0px;  position: absolute;top: 0; background-color:rgba(0,0,0,.3);color:white; border-radius: 0px 0px 7px 7px;width: 100vw;display: flex;z-index: 99;direction: rtl;}
+nav.flexmenu{padding: 5px 0px 0px 0px;  position: absolute;top: 0; background-color:rgba(0,0,0,.3);color:white; width: 100vw;z-index: 99;}
 nav.flexmenu>ul{display: flex; position: relative;margin: 0px;list-style: none;}
 nav.flexmenu>ul>li>a{width: auto; padding: 10px 15px 15px;border-radius: 5px;font-size: 1.07em;display: block;color: white;}
 nav.flexmenu ul li a:hover{text-shadow: -4px 4px 10px black; }
@@ -77,13 +80,14 @@ nav.flexmenu ul li:hover{background-color: rgba(0,0,0,0.2);border-radius: 5px;}
 .heading{
 	position: absolute;
 	bottom: 0;
-  	left: 0;
+  	left: -200px;
 	font-size: 16px;
 	letter-spacing: 1px;
 	background: rgba(0,0,0,.6);
 	transition: all .5s;
-	display: none;
 	font-family: arial;
+	opacity: 0;
+	
 }
 .overflow-hidden{
 	overflow: hidden;
@@ -158,8 +162,12 @@ ul#specsid li:hover{
 .top100 {
 	top: 100%;
 }
-
-
+.right100{
+	right: 100%;
+}
+.rightminus100{
+	right: -100%;
+}
 .modal-cover {
 	position: fixed; background: rgba(0,0,0,0.9);z-index: 100;
 }
@@ -220,4 +228,59 @@ ul#specsid li:hover{
 }
 .myFilter:hover {
 	filter: contrast(1.2);
+}
+.flex {
+	display: -ms-flexbox;
+	display: flex;
+}
+.mymenu{
+	position: fixed;
+	top:40px;
+	right: 20px;
+	background: rgba(0,0,0,.9);
+}
+
+
+
+@media (max-width: 767px) {
+	.m-content{
+		width: 300px;
+	}
+	.menuContainer{
+		display: none;
+		flex: 1 0 100%;
+		order: 2;
+		z-index: 100;
+	}
+	.mymenu1{
+		display: flex;
+		flex-flow: column wrap;
+	}
+	.mymenu1 li{
+		display: block;
+		width: 100%;
+	}
+/*
+	.menuContainer{
+		position: absolute;
+		top: 100%;
+	}
+	.mymenu1{
+		
+	}
+	.mymenu1 li{
+		
+	}
+*/
+}
+@media (min-width: 768px) {
+	.d-none-md{
+		display: none;
+	}
+	.d-block-md{
+		display: block;
+	}
+	.d-flex-md{
+		display: flex;
+	}
 }

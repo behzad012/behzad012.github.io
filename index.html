@@ -5,12 +5,12 @@
 	<title>project-proto</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-	<link rel="stylesheet" href="css/project-proto2.0.1.css" type="text/css">
+	<link rel="stylesheet" href="css/project-proto2.0.3.css" type="text/css">
 	<script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
-<div class="container-fluid bg-info vw-100 vh-100 ltr position-relative  overflow-hidden">
-	<nav class="flexmenu userSelect">
+<div class="container-fluid bg-info vw-100 vh-100 ltr position-relative  overflow-hidden ">
+	<nav class="flexmenu userSelect d-flex flex-wrap rtl">
 		<div class="flex-grow-1 mr-5 d-md-none">
 			<div class="container-icon mr-4 mt-1">
 			  <div class="bar1"></div>
@@ -18,22 +18,15 @@
 			  <div class="bar3"></div>
 			</div>
 		</div>
-		<div class="none sm-dis rtl position-absolute top100 w-100 d-md-none" style="background-color:rgba(0,0,0,.3);">
-			<ul id="scroll1" class="scroll1 list-unstyled w-100 m-0 p-0">
-				<li class="m-0 pr-4"><a class="text-white p-2 d-block" href="#">صفحه اصلی</a></li>
-				<li class="m-0 pr-4"><a class="text-white p-2 d-block" href="#intro">معرفی محصول</a></li>
-				<li class="m-0 pr-4"><a class="text-white p-2 d-block" href="#gallery">گالری</a></li>
-				<li class="m-0 pr-4"><a class="text-white p-2 d-block" href="#specscroll">مشخصات</a></li>
-				<li class="m-0 pr-4"><a class="text-white p-2 d-block" href="#contact">ارتباط با ما</a></li>
+		<div class="menuContainer d-md-flex flex-grow-1 userSelect">	
+			<ul id="flexmenu1" class="mymenu1 p-0 m-0 pr-md-5  d-md-flex">
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#">صفحه اصلی</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#intro">معرفی محصول</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#gallery">گالری</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#specscroll">مشخصات</a></li>
+				<li class="m-0 pr-5 pr-md-0"><a class="text-white p-2 p-md-3 d-block w-100 h-100" href="#contact">ارتباط با ما</a></li>
 			</ul>
 		</div>
-		<ul id="scroll" class="scroll2 flex-grow-1 mr-md-5 d-none d-md-flex">
-			<li><a href="#">صفحه اصلی</a></li>
-			<li><a href="#intro">معرفی محصول</a></li>
-			<li><a href="#gallery">گالری</a></li>
-			<li><a href="#specscroll">مشخصات</a></li>
-			<li><a href="#contact">ارتباط با ما</a></li>
-		</ul>
 		<ul>
 			<li id="login" class="mr-auto ml-3 "><a href="#">ورود</a></li>
 		</ul>
@@ -112,12 +105,11 @@
       <div class="row text-white text-center">
         <div class="col m-4">
           <h1 class="display-4 mb-4">ASUS ZenBook S13</h1>
-          <div class="underline mb-4"></div>
           <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-sm-6 my-5 " style="height: 400px;">
+        <div class="col-lg-4 col-sm-6  my-5" style="height: 400px;">
           <div class="card border-0 card-shadow w-100 h-100 pointer myFilter modalImg" data-modalcaption="ASUS ZenBook S13" data-modalsrc="Images/c-1.jpg" style="background: url(Images/c-1.jpg) no-repeat center/cover">
             <div class="card-img-overlay overflow-hidden">
               <h5 class="text-white font-weight-bold p-3 heading">ASUS ZenBook S13</h5>
@@ -643,5 +635,5 @@
 	
 	
 </body>
-<script src="js/project-proto2.0.1.js"></script>
+<script src="js/project-proto2.0.3.js"></script>
 </html>
