@@ -79,6 +79,8 @@ $(window).resize(function(){
 	}
 	$('footer').outerHeight($('#posAnim71').outerHeight());
 });
+
+
 (function ( $ ) {
 	$.fn.scrollSmooth = function(options) {
 	 	var option = $.extend({

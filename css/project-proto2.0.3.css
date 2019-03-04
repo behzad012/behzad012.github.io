@@ -254,24 +254,12 @@ ul#specsid li:hover{
 	}
 	.mymenu1{
 		display: flex;
-		flex-flow: column wrap;
+		flex-flow: column nowrap;
 	}
 	.mymenu1 li{
 		display: block;
 		width: 100%;
 	}
-/*
-	.menuContainer{
-		position: absolute;
-		top: 100%;
-	}
-	.mymenu1{
-		
-	}
-	.mymenu1 li{
-		
-	}
-*/
 }
 @media (min-width: 768px) {
 	.d-none-md{
@@ -282,5 +270,9 @@ ul#specsid li:hover{
 	}
 	.d-flex-md{
 		display: flex;
+	}
+	.menuContainer{
+		height: auto !important;
+		z-index: 100;
 	}
 }
